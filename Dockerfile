@@ -1,6 +1,12 @@
-FROM node:18-alpine
+#FROM node:18-alpine
+FROM node:18-bookworm-slim
 
-RUN apk --no-cache add procps
+#RUN apk --no-cache add procps
+
+RUN apt-get update && \
+    apt-get install -y procps && \
+    rm -rf /var/lib/apt/list
+
 ENV LANG=en_US.utf8 \
     TERM=xterm-256color
 
