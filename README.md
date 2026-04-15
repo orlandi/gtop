@@ -33,6 +33,12 @@ $ docker run --rm -it \
     aksakalli/gtop
 ```
 
+Current docker run is:
+
+```
+docker run --rm -it --gpus all --name gtop --net="host" --pid="host" --security-opt apparmor=unconfined gtop
+```
+
 ### Usage
 
 Start gtop with the `gtop` command

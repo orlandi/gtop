@@ -1,1 +1,1 @@
-docker run --rm -it --gpus all --name gtop --net="host" --pid="host" gtop
+docker run --rm -it --gpus all --name gtop --net="host" --pid="host" --security-opt apparmor=unconfined gtop
